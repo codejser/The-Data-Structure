@@ -141,7 +141,7 @@ public class DynamicArray<E> {
         }
     }
     //获取对应索引的元素
-    E get(int index){
+    public E get(int index){
         if(index <0 || index >= size){
             throw new IllegalArgumentException("get fail , index is illegal");
         }
@@ -151,6 +151,10 @@ public class DynamicArray<E> {
     //获取数组中最后一个元素：复用get方法
     public E getLast(){
         return get(size - 1);
+    }
+
+    public E getFirst(){
+        return get(0);
     }
 
     //改变给定索引对应元素的值
