@@ -4,19 +4,19 @@ package Array;
  * @Author: meteor @Date: 2018/7/13 23:41
  * 设计一个普通的数组（非泛型:Int型）
  */
-public class array {
+public class arrayone {
 
     //私有属性
     private int[] data;         //数组
     private int size;           //数组的大小
 
     //构造方法:给一个数组的初始化容量
-    public array(int capacity){
+    public arrayone(int capacity){
         data = new int[capacity];
     }
 
     //把有参数的构造方法封装到无参的构造方法中
-    public array(){
+    public arrayone(){
         this(10);
         size = 0;
     }
@@ -36,7 +36,7 @@ public class array {
         //可以重用add(index,element)的方法
         add(size,element);
         /*if(size == data.length){
-            throw new IllegalArgumentException("addLast fail , array is full");
+            throw new IllegalArgumentException("addLast fail , arrayone is full");
         }
         data[size] = element;
         size ++;*/
@@ -50,7 +50,7 @@ public class array {
     //给定索引下插入元素
     public void add(int index,int element){
         if(size == data.length){
-            throw new IllegalArgumentException("addLast fail , array is full");
+            throw new IllegalArgumentException("addLast fail , arrayone is full");
         }
 
         if(index < 0){
@@ -148,7 +148,7 @@ public class array {
     @Override
     public String toString(){
         StringBuilder s = new StringBuilder();
-        s.append(String.format("array: size=%d,capacity=%d\n",size,data.length));
+        s.append(String.format("arrayone: size=%d,capacity=%d\n",size,data.length));
         s.append("[");
         for(int i=0;i<size;i++){
             s.append(data[i]);

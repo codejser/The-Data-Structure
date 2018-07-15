@@ -36,7 +36,7 @@ public class DynamicArray<E> {
         //可以重用add(index,element)的方法
         add(size,element);
         /*if(size == data.length){
-            throw new IllegalArgumentException("addLast fail , array is full");
+            throw new IllegalArgumentException("addLast fail , arrayone is full");
         }
         data[size] = element;
         size ++;*/
@@ -148,6 +148,11 @@ public class DynamicArray<E> {
         return data[index];
     }
 
+    //获取数组中最后一个元素：复用get方法
+    public E getLast(){
+        return get(size - 1);
+    }
+
     //改变给定索引对应元素的值
     void set(int index,E element){
         if(index <0 || index >= size){
@@ -163,7 +168,7 @@ public class DynamicArray<E> {
     @Override
     public String toString(){
         StringBuilder s = new StringBuilder();
-        s.append(String.format("array: size=%d,capacity=%d\n",size,data.length));
+        s.append(String.format("arrayone: size=%d,capacity=%d\n",size,data.length));
         s.append("[");
         for(int i=0;i<size;i++){
             s.append(data[i]);

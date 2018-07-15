@@ -1,13 +1,10 @@
-package test;
-
-import Array.DynamicArray;
-import Array.array;
+package Array;
 
 public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        /**array a = new array(20);
+        /**arrayone a = new arrayone(20);
         for(int i=0;i<10;i++){
          a.addLast(i);
          }
