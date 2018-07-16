@@ -135,6 +135,38 @@ public class LinkList<E> {
         return false;
     }
 
+    /**
+     * 删除链表中的结点
+     */
+    public void  remove(int index){
+        if(index < 0 || index > size ){
+            throw new IllegalArgumentException("remove fail , index is illegal");
+        }
+
+        Node pre = dummyNode;
+        for(int i=0; i<index;i++){
+            pre = pre.next;
+        }
+        pre.next = pre.next.next;
+        size --;
+    }
+    /**
+     * 删除链表中的头结点
+     */
+    public void  removeFirst(){
+        remove(0);
+    }
+
+
+    /**
+     * 删除链表中的头结点
+     */
+    public void  removeLast(){
+        remove(size-1);
+    }
+
+
+
     //重写toString方法：便于测试
     @Override
     public String toString(){
@@ -160,6 +192,8 @@ public class LinkList<E> {
         linkList.set(2,10);
         System.out.println(linkList.toString());
         System.out.println(linkList.getLast());
+        linkList.remove(3);
+        System.out.println(linkList.toString());
 
     }
 
