@@ -65,4 +65,21 @@ public class Lcode203 {
         return head;
     }
 
+    /**
+     * 递归方法
+     * @param head
+     * @param val
+     * @return
+     */
+    public ListNode removeElements3(ListNode head, int val) {
+        if(head == null)
+            return head;
+
+        head.next = removeElements3(head.next, val);
+        return head.val == val ? head.next : head;
+    }
+
+
+
+
 }

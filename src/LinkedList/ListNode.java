@@ -86,11 +86,19 @@ public class ListNode {
         return head;
     }
 
+    public ListNode removeElements3(ListNode head, int val) {
+        if(head == null)
+            return head;
+
+        head.next = removeElements3(head.next, val);
+        return head.val == val ? head.next : head;
+    }
+
 
         public static void main(String[] args){
               int[] arr = {1,2,6,3,4,5,6};
               ListNode listNode = new ListNode(arr);
-              listNode.removeElements2(listNode,6);
+              listNode.removeElements3(listNode,6);
               System.out.println(listNode.toString());
         }
 
