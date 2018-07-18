@@ -193,10 +193,10 @@ public class BST<E extends Comparable<E>> {
         for(int i=0;i<nums.length;i++){
             bst.add(nums[i]);
         }
-        //bst.preOrder();
+        /*//bst.preOrder();
         //bst.cenOrder();
         //bst.lastOrder();
-        //bst.preOrderNR();
+        //bst.preOrderNR();*/
         bst.levelOrder();
     }
 
