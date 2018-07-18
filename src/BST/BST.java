@@ -1,6 +1,8 @@
 package BST;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -162,6 +164,28 @@ public class BST<E extends Comparable<E>> {
     }
 
 
+    //层次遍历二叉树：利用队列结构
+    public void levelOrder(){
+        if(root == null)
+            return;
+
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(root);
+        while (!q.isEmpty()){
+            Node cur = q.remove();
+            System.out.println(cur.e);
+
+            if(cur.left != null){
+                q.add(cur.left);
+            }
+            if(cur.right != null){
+                q.add(cur.right);
+            }
+        }
+    }
+
+
+
     public static void main(String[] args) {
 
         BST<Integer> bst = new BST<Integer>();
@@ -169,10 +193,11 @@ public class BST<E extends Comparable<E>> {
         for(int i=0;i<nums.length;i++){
             bst.add(nums[i]);
         }
-        bst.preOrder();
+        //bst.preOrder();
         //bst.cenOrder();
         //bst.lastOrder();
         //bst.preOrderNR();
+        bst.levelOrder();
     }
 
 }
