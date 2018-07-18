@@ -1,5 +1,8 @@
 package BST;
 
+
+import java.util.Stack;
+
 /**
  * @Author: meteor @Date: 2018/7/18 14:39
  * //构建一个二分搜索树：
@@ -137,6 +140,27 @@ public class BST<E extends Comparable<E>> {
 
     }
 
+    //非递归版的前序遍历二分搜索树：借用栈的结构
+    public void preOrderNR(){
+        if(root == null)
+            return;
+
+        Stack<Node> s = new Stack<Node>();
+        s.push(root);
+        while (!s.isEmpty()){
+            Node cur = s.pop();
+            System.out.println(cur.e);
+
+
+            if(cur.right != null){
+                s.push(cur.right);
+            }
+            if(cur.left != null){
+                s.push(cur.left);
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -145,9 +169,10 @@ public class BST<E extends Comparable<E>> {
         for(int i=0;i<nums.length;i++){
             bst.add(nums[i]);
         }
-        //bst.preOrder();
+        bst.preOrder();
         //bst.cenOrder();
-        bst.lastOrder();
+        //bst.lastOrder();
+        //bst.preOrderNR();
     }
 
 }
