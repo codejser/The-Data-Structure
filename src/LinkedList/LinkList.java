@@ -165,6 +165,32 @@ public class LinkList<E> {
         remove(size-1);
     }
 
+    /**
+     * 删除链表中的元素
+     * @param e
+     */
+    public void removeElement(E e){
+        remove(ElementIndex(e));
+    }
+
+    /**
+     * 链表中元素对应的下标
+     * @param e
+     * @return
+     */
+    private int ElementIndex(E e){
+        int count = -1;              //计数器
+        Node cur = dummyNode.next;              //头结点
+        while (cur != null){
+            count++;
+            if(cur.data == e){
+                break;
+            }
+            cur = cur.next;
+        }
+        return count;
+    }
+
 
 
     //重写toString方法：便于测试
@@ -186,15 +212,16 @@ public class LinkList<E> {
             System.out.println(linkList.toString());
         }
 
-        linkList.addIndex(3,8);
+       /* linkList.addIndex(3,8);
         System.out.println(linkList.toString());
         System.out.println(linkList.contains(1));
         linkList.set(2,10);
         System.out.println(linkList.toString());
         System.out.println(linkList.getLast());
         linkList.remove(3);
+        System.out.println(linkList.toString());*/
+        linkList.removeElement(3);
         System.out.println(linkList.toString());
-
     }
 
 
