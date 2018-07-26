@@ -8,7 +8,7 @@ public class No13 {
 
 
     /**
-     * 根据指定的入参结点删除
+     * 删除指定的入参结点
      * @param head
      * @param c
      */
