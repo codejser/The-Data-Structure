@@ -3,6 +3,7 @@ package Offer;
 /**
  * @Author: meteor @Date: 2018/7/26 17:03
  * 剑指Offer第13题
+ * 给定单向链表的头指针和一个结点指针， 定义一个函数在O（1）时间删除该节点
  */
 public class No13 {
 
