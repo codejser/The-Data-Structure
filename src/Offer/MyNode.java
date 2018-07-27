@@ -2,7 +2,7 @@ package Offer;
 
 /**
  * @Author: meteor @Date: 2018/7/27 22:13
- */ //构造一个结点类
+ */ //构造一个结点类:链表
 class MyNode{
     int data;
     MyNode next;
