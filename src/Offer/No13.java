@@ -12,7 +12,7 @@ public class No13 {
      * @param head
      * @param c
      */
-    private static void delete(myNode head,myNode c){
+    private static void delete(MyNode head, MyNode c){
         //三种情况：
         //1.删除的结点是尾结点；
         if(c.next == null){
@@ -31,48 +31,21 @@ public class No13 {
 
     //测试delete方法
     public static void main(String[] args) {
-        myNode a = new myNode(1);
-        myNode b = new myNode(2);
-        myNode c = new myNode(3);
-        myNode d = new myNode(4);
+        MyNode a = new MyNode(1);
+        MyNode b = new MyNode(2);
+        MyNode c = new MyNode(3);
+        MyNode d = new MyNode(4);
         a.setNext(b);
         b.setNext(c);
         c.setNext(d);
         //delete(a,b);
         delete(a,a);
         //delete(a,d);
-        myNode cur = a;
+        MyNode cur = a;
         while (cur != null){
             System.out.println(cur.getData());
             cur = cur.next;
         }
     }
 
-}
-
-
-//构造一个结点类
-class myNode{
-    int data;
-    myNode next;
-
-    public myNode(int data) {
-        this.data = data;
-    }
-
-    public int getData() {
-        return data;
-    }
-
-    public void setData(int data) {
-        this.data = data;
-    }
-
-    public myNode getNext() {
-        return next;
-    }
-
-    public void setNext(myNode next) {
-        this.next = next;
-    }
 }
