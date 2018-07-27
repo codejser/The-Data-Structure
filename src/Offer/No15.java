@@ -37,6 +37,7 @@ public class No15 {
      * 1.输入的链表为空；
      * 2.输入的链表总结点个数小于输入的参数K；
      * 3.K值为0；
+     * 返回0代表出现错误
      * @param head
      * @param K
      */
@@ -88,6 +89,7 @@ public class No15 {
      * 1.输入的链表为空；
      * 2.输入的链表总结点个数小于输入的参数K；
      * 3.K值为0；
+     * 返回0代表出现错误
      * @param head
      * @param K
      * @return
