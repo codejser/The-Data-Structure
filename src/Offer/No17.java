@@ -22,6 +22,8 @@ public class No17 {
         e.setNext(f);
         f.setNext(g);
         g.setNext(h);
+        //a = null;
+        //e = null;
         MyNode newNode = merge(a,e);
         while (newNode != null){
             System.out.print(newNode.data);
