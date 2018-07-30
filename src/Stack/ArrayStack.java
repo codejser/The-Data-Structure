@@ -1,12 +1,13 @@
 package Stack;
 
 import Array.DynamicArray;
+import Stack.Stack;
 
 /**
  * @Author: meteor @Date: 2018/7/15 11:17
  * 用动态数组来实现栈结构
  */
-public class ArrayStack<E> implements Stack<E>{
+public class ArrayStack<E> implements Stack<E> {
 
     //声明一个动态数组
     DynamicArray<E> array;
