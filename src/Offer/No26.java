@@ -1,5 +1,8 @@
 package Offer;
 
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 /**
  * @Author: meteor @Date: 2018/9/2 14:09
  * 剑指Offer第26题：
@@ -89,6 +92,13 @@ public class No26 {
             node = cloneNode.next;
         }
     }
+    //ArrayList
+    //CopyOnWriteArrayList
+    //LinkedList
+    //HashMap
+    //Hashtable
+    //Collection
+    //AbstractCollection
 }
 
 //复杂链表结点
