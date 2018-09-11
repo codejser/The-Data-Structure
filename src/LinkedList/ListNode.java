@@ -5,9 +5,9 @@ package LinkedList;
  */
 public class ListNode {
 
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
+        public int val;
+        public ListNode next;
+        public ListNode(int x) { val = x; }
 
 
         //将传进来的数组转化成链表
