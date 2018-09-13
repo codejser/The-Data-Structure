@@ -57,11 +57,11 @@ public class No42 {
      * @param end
      */
     private static void reverse(char[] c,int start,int end){
-        for (int i=start,j=end;i<=j;i++,j--){
-            char temp = c[i];
-            c[i] = c[j];
-            c[j] = temp;
-        }
+            for (int i=start,j=end;i<=j;i++,j--){
+                char temp = c[i];
+                c[i] = c[j];
+                c[j] = temp;
+            }
       /*  int i = start;
         int j = end;
         while (i<=j){
